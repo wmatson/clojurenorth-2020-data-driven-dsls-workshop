@@ -32,7 +32,7 @@
 
   (def custom-effects
       [{:ece/id :wmatson.dominion.effects/multiplying-money
-        :handler (fn [world]
+        :handler (fn [world args]
                     (update world :to-resolve conj {:ece-helpers/add (money-gain (swap! money-multiplier inc))}))}])
 
   (def game
